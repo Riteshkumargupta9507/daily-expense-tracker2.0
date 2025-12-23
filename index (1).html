@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Daily Expense Tracker</h2>
+
+<div class="container">
+
+  <!-- Summary Cards -->
+  <div class="summary">
+    <div class="card">
+      <h4>Today</h4>
+      <p id="todayTotal">₹0</p>
+    </div>
+    <div class="card">
+      <h4>This Month</h4>
+      <p id="monthTotal">₹0</p>
+    </div>
+    <div class="card">
+      <h4>Top Category</h4>
+      <p id="topCategory">-</p>
+    </div>
+  </div>
+
+  <!-- Expense Form -->
+  <form id="expenseForm">
+    <input type="date" id="date" required>
+    <input type="number" id="amount" placeholder="Amount ₹" required>
+
+    <select id="category">
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Rent</option>
+      <option>Shopping</option>
+      <option>Other</option>
+    </select>
+
+    <input type="text" id="note" placeholder="Note (optional)">
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <!-- Expense Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>Note</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="expenseTable"></tbody>
+  </table>
+
+</div>
+<h3>Expense Analysis</h3>
+
+<div class="charts">
+  <canvas id="dailyChart"></canvas>
+  <canvas id="categoryChart"></canvas>
+</div>
+
+<!-- Chart.js FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Your JS SECOND -->
+<script src="script.js"></script>
