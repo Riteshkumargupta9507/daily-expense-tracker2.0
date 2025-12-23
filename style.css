@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  background-color: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Summary Cards */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  border: 2px solid #000;    /* Add black border */
+}
+
+
+.card:nth-child(1) { background-color: #ff7043; } /* Today - orange */
+.card:nth-child(2) { background-color: #42a5f5; } /* This Month - blue */
+.card:nth-child(3) { background-color: #66bb6a; } /* Top Category - green */
+
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select {
+  font-weight: bold;      /* Bold text */
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1.5px solid #000;
+  color: #000;            /* Text color */
+}
+
+
+
+
+/* Add background colors per input type */
+#date { background-color: #e3f2fd; }       /* Light Blue */
+#amount { background-color: #fff3e0; }     /* Light Orange */
+#category { background-color: #e8f5e9; }   /* Light Green */
+#note { background-color: #f3e5f5; }       /* Light Purple */
+
+/* Button */
+button {
+  grid-column: span 2;
+  background: #ff7043;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #f4511e; /* Darker shade on hover */
+}
+
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;  /* Outer table border */
+}
+
+th, td {
+  border: 1px solid #000;  /* Inner cell borders */
+  padding: 8px;
+  text-align: center;
+}
+
+
+th {
+  background: #f0f0f0;
+}
+
+/* Category Colors */
+.Food { color: orange; }
+.Travel { color: blue; }
+.Rent { color: red; }
+.Shopping { color: purple; }
+.Other { color: gray; }
+
+.charts {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+canvas {
+  border-radius: 12px;
+  padding: 10px;
+  background: #fdfdfd;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+/* Table category colors */
+.Food { color: #ff7043; font-weight: bold; }
+.Travel { color: #42a5f5; font-weight: bold; }
+.Rent { color: #ef5350; font-weight: bold; }
+.Shopping { color: #ab47bc; font-weight: bold; }
+.Other { color: #9e9e9e; font-weight: bold; }
+
+/* Optional: alternate row colors */
+table tbody tr:nth-child(odd) { background-color: #f9f9f9; }
+table tbody tr:nth-child(even) { background-color: #ffffff; }
+
+
+canvas {
+  background-color: #f5f5f5;   /* Chart background */
+  border: 2px solid #000;      /* Black border around charts */
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  width: 100% !important;
+  height: 300px !important;
+}
+
+
